@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+}
+
+body {
+    background: #fff7f3;
+    color: #4a3b38;
+    position: relative;
+}
+
+/* DOTTED TEXTURE */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(#e8b4bc 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.15;
+    z-index: -2;
+}
+
+/* BLOBS */
+.blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.blob1 {
+    width: 300px;
+    height: 300px;
+    background: #e8b4bc;
+    top: -120px;
+    left: -120px;
+}
+
+.blob2 {
+    width: 350px;
+    height: 350px;
+    background: #ffd6e0;
+    bottom: -150px;
+    right: -120px;
+}
+
+.blob3 {
+    width: 260px;
+    height: 260px;
+    background: #f3c1cb;
+    top: 40%;
+    left: -140px;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #c97c8b;
+    color: white;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar:hover {
+    background-color: palevioletred;
+    color: bisque;
+}
+
+/* HERO */
+.hero {
+    background: #e8b4bc;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+/* WAVE */
+.wave svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.light {
+    background: #fff0eb;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+/* BOOK CARDS */
+.book-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(181, 101, 118, 0.25);
+    transform: rotate(-1deg);
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: rotate(0deg) scale(1.04);
+}
+
+.book-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CURRENTLY READING */
+.reading-box {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.reading-box img {
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(181, 101, 118, 0.3);
+}
+
+/* REVIEWS */
+.reviews {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.review {
+    background: white;
+    padding: 1.2rem;
+    border-left: 6px solid #b56576;
+    border-radius: 8px;
+}
+
+/* NEWSLETTER */
+.newsletter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: 1px solid #c97c8b;
+}
+
+.newsletter button {
+    padding: 0.7rem 1.2rem;
+    background: #b56576;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #c97c8b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+button:hover {
+    background-color: #fff7f3;
+    color: rgb(131, 87, 62);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
